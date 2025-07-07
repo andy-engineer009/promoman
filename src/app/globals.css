@@ -90,7 +90,7 @@ body {
     transform: translate(0%, -50%);
 }
   h2{
-    color: #000;
+    color: #fff;
     position: relative;
     z-index: 1;
   }
