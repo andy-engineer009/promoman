@@ -1,0 +1,118 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  /* background: var(--background); */
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+@tailwind components;
+
+@layer components {
+  .blinking-cursor {
+    font-weight: 500;
+    color: #a3e635; /* lime-400 */
+    -webkit-animation: 1s blink step-end infinite;
+    -moz-animation: 1s blink step-end infinite;
+    -ms-animation: 1s blink step-end infinite;
+    -o-animation: 1s blink step-end infinite;
+    animation: 1s blink step-end infinite;
+  }
+
+  @keyframes blink {
+    from, to { color: transparent; }
+    50% { color: #a3e635; }
+  }
+}
+
+@layer utilities {
+  @keyframes scroll-marquee {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+}
+
+.typewriter-text {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #a3e635;
+}
+
+.blinking-cursor {
+  animation: blink 1s step-end infinite;
+  margin-left: 2px;
+}
+
+@keyframes blink {
+  from, to { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+
+
+
+.trusted_partner{
+  position: relative;
+  &::after{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    width: 216px;
+    height: 45px;
+    background: url('https://odoocdn.com/openerp_website/static/src/img/highlights/blue_highlight_bold_03.svg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    transform: translate(0%, -50%);
+}
+  h2{
+    color: #000;
+    position: relative;
+    z-index: 1;
+  }
+}
+
+.card-hero {
+  background: #b5fc4f;
+  border-radius: 8px;
+  padding: 10px;
+  width:90%;
+  height: 60px;
+  position: absolute;
+  bottom: 20px;
+  left: 0%;
+  right: 0%;
+  margin: 0 auto;
+  z-index: 1;
+    h2{
+      font-size: 2rem;
+      font-weight: 700;
+      color: #000;
+    }
+}
+  
+

@@ -1,0 +1,31 @@
+.sliderContainer {
+    width: 100%;
+    max-width: 1200px;
+    overflow: hidden;
+    position: relative;
+    margin: 0 auto;
+  }
+  
+  .sliderTrack {
+    display: flex;
+    gap: var(--gap, 20px);
+    width: max-content;
+  }
+  
+  .sliderCard {
+    height: 50px;
+    background: transparent;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    flex-shrink: 0;
+  }
+
+  .img{
+    filter: brightness(0) invert(100%);
+  }
